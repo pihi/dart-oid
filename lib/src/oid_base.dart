@@ -1,3 +1,5 @@
+import 'package:quiver/core.dart' show hash2;
+
 
 class Oid {
   static final Oid _root = new Oid._internal(null, null);
@@ -36,5 +38,14 @@ class Oid {
   String toString() {
     return parent == _root ? node.toString() :
       this.parent.toString() + "." + node.toString();
+  }
+
+ @override
+  int get hashCode => hash2(node, parent);
+
+  @override
+  bool operator ==(other) {
+    if (!(other is Oid)) return false;
+    return node == other.node && parent == other.parent;
   }
 }

@@ -1,8 +1,11 @@
 name: oid
 description: A library supporting the OID format.
-version: 0.0.1
+version: 0.0.2
 author: P. Isaac Hildebrandt <isaac@pihimedia.com>
 homepage: https://github.com/pihi/dart-oid
+
+dependencies:
+  quiver: '>=0.29.0 <0.30.0'
 
 environment:
   sdk: '>=1.20.1 <2.0.0'
